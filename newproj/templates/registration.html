@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>submitting</title>
+<style>
+	body{
+		background-color:#0f34;
+		
+		border:solid;
+		border-color:blue;
+  		color:green;
+		
+	width: 100%;
+	background-size: cover;
+	/*#color: white;*/
+	font-family: sans-serif;
+
+	}
+	.d-sub{width:200px;background:wheat;border-radius: 12px;color:black;font-size:12px;border:5px solid #fff;outline:none;font-weight:bolder;letter-spacing:2px;}
+</style>
+</head>
+<body>
+	<h1 style="text-align:center"> REGISTER HERE</h1>
+<form name="MyForm" method="POST" action=""><br/><br/>
+	<table border="5" align="center" cellspacing="10" cellpadding="10">
+	<tr>
+	<th colspan="1" style="font-size:50">Registration</th>
+	</tr>
+<tr>
+<td><label>UserName:</label></form><br/><br/>
+<input type="text" name="username" size="20" maxlength="30" placeholder="Enter Name" id="txtName" class="d-sub" oninput=nameValidation() required autofocus/> <span id="errorName"></span><br/><br/></td>
+</tr>
+<tr>
+<td><label>Email:</label><br/><br/>
+<input type="text" name="email" size="30" maxlength="40" placeholder="Enter Your Email" class="d-sub" required><br/><br/></td>
+</tr>
+<tr>
+<td><label>Password:</label><br/><br/>
+<input type="password" name="password1" size="20" maxlength="10" placeholder="Enter Password" class="d-sub" required><br/><br/></td>
+</tr>
+<tr>
+<td><label>Confirm:</label><br/><br/>
+<input type="password" name="confirm-password1" size="20" maxlength="10" placeholder="Confirm Password" class="d-sub" required><br/><br/></td>
+</tr>
+<tr>
+<td><label>Phone no:</label><br/><br/>
+<input type="text" name="phno" size="20" maxlength="20" placeholder="Enter phoneno"  class="d-sub" ><br/><br/></td>
+</tr>
+<tr>
+<td><label>User locale:</label><br/><br/>
+<input type="text" name="locale" size="30" maxlength="30" placeholder="Enter locale" class="d-sub" required><br/><br/></td>
+</tr>
+<tr>
+<td><label>Date Of Birth:</label><br/><br/>
+<input type="Date" name="date1" class="d-sub" required><br/><br/></td>
+</tr>
+<tr>
+<td><label>Gender:</label><br/><br/>
+<input type="radio" name="gender" value="male"  class="d-sub" required>Male<br/>
+<input type="radio" name="gender" value="female"  class="d-sub" required>Female<br/></td>
+</tr>
+<tr>
+<td><label>Age:</label><br/><br/>
+<input type="text" name="age" size="20" maxlength="20" placeholder="Enter Age" class="d-sub" required><br/><br/></td>
+</tr>
+
+</table><br/><br/>
+<div style="text-align:center">
+<input type="submit" value="Register" onclick="index()" style="font-size:20; color : black;" class="d-sub"/>
+<p>Already have an account</p><a class="btn btn-secondary" href='/'>Sign In</a>
+</div>
+<script type="text/javascript">
+
+function nameValidation(){
+var userValue=document.getElementById("txtName").value;
+var namePattern="^[a-zA-Z]+$";
+if(!userValue.match(namePattern))
+	document.getElementById("errorName").innerHTML="Name Should only Contain Characters";
+else
+	document.getElementById("errorName").innerHTML="";
+}
+
+function phnoValidation(){
+var userValue=document.getElementById("txtphno").value;
+var phnoPattern="[6-9]{1}[0-9]{9}";
+if(!userValue.match(phnoPattern))
+	document.getElementById("errorPhno").innerHTML="Phone Number should only contain Numbers";
+else
+	document.getElementById("errorPhno").innerHTML="";
+}
+
+</script>
+</form>
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    
+</head>
+<body>
+  {{rec}}
+  <canvas id="pie"></canvas>
+  
+  <script>
+    console.log({{rec}})
+//   var ctx = document.getElementById('pie').getContext('2d');
+    
+//   new Chart(ctx, {
+//     type: 'pie',
+//     data: {
+//       labels: ['F','M'],
+//       datasets: [{
+//         label: "Population (millions)",
+//         backgroundColor: ["#3e95cd", "#8e5ea2"],
+//         data: {{freq}}
+//       }]
+//     },
+//     options: {
+//       title: {
+//         display: true,
+//         text: 'Predicted world population (millions) in 2050'
+//       }
+//     }
+// });
+  
+
+</script>
+</body>
+</html>
